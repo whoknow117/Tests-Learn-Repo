@@ -1,15 +1,21 @@
 import {sum, mult, splitIntoWords} from "./01";
 
+let a: number
+let b: number
+let c: number
+beforeEach(() => {
+    a = 1;
+    b = 2;
+    c = 3;
+})
+
 test('sum should be correct', () => {
 
     // start data
-    const a = 1;
-    const b = 2;
-    const c = 3;
 
 
-    const result1 = sum(a,b)
-    const result2 = sum(a,c)
+    const result1 = sum(a, b)
+    const result2 = sum(a, c)
 
 
     //expect result
@@ -21,22 +27,18 @@ test('sum should be correct', () => {
 })
 
 test('multiply should be correct', () => {
-    const a = 1;
-    const b = 2;
-    const c = 4;
 
 
-    const result1 = mult(a,b)
-    const result2 = mult(a,c)
+    const result1 = mult(a, b)
+    const result2 = mult(a, c)
 
 
     expect(result1).toBe(2);
-    expect(result2).toBe(4);
+    expect(result2).toBe(3);
 })
 
 
 test('splitIntoWords should be correct', () => {
-
 
 
     const sent1 = "Hello my friend!";
