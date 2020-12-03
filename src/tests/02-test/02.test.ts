@@ -19,11 +19,7 @@ beforeEach(() => {
         scores: 90,
         friends: [ ]
     }
-    studentGroup = [
-        {name: 'alex', age: 23,isMarried: false,scores: 90,friends: []},
-        {name: 'dima', age: 23,isMarried: false,scores: 90,friends: []},
-        {name: 'mindy', age: 23,isMarried: false,scores: 90,friends: []},
-    ]
+
 })
 
 test("addFriends should be correct", () => {

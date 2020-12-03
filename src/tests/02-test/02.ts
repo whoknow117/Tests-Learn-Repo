@@ -6,11 +6,22 @@ export type StudentType = {
     friends: Array<string>
 }
 
-export function addFriends(gr: StudentsGroupType) {
 
-    return gr.map(st => ({...st, friends: gr.filter( s => s.name !== st.name).map( n => n.name)}))
+
+
+let studentGroup = [
+    {name: 'alex', age: 23,isMarried: false,scores: 90,friends: []},
+    {name: 'dima', age: 23,isMarried: false,scores: 90,friends: []},
+    {name: 'mindy', age: 23,isMarried: false,scores: 90,friends: []},
+]
+
+
+export function addFriends (array:StudentsGroupType) {
+    let newArr = array.map( st =>  ({...st, friends: array.filter( s => s.name !== st.name).map( n => n.name)}))
+    return newArr
 }
 
+console.log(addFriends(studentGroup))
 
 
 export type StudentsGroupType = Array<StudentType>
